@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230214 22:58:40.944" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Login Rf" source="C:\Users\Vova\PycharmProjects\robotframework\test_login_rf.robot">
+<test id="s1-t1" name="Login to the system" line="13">
+<kw name="Open login page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230214 22:58:41.148" level="INFO">Opening browser 'Chrome' to base url 'https://scouts-test.futbolkolektyw.pl/en'.</msg>
+<status status="PASS" starttime="20230214 22:58:41.148" endtime="20230214 22:58:42.795"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel - sign in</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230214 22:58:42.798" level="INFO">Page title is 'Scouts panel - sign in'.</msg>
+<status status="PASS" starttime="20230214 22:58:42.795" endtime="20230214 22:58:42.798"/>
+</kw>
+<status status="PASS" starttime="20230214 22:58:41.148" endtime="20230214 22:58:42.798"/>
+</kw>
+<kw name="Type in email">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAILINPUT}</arg>
+<arg>user07@getnada.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230214 22:58:42.799" level="INFO">Typing text 'user07@getnada.com' into text field 'xpath=//*[@id='login']'.</msg>
+<status status="PASS" starttime="20230214 22:58:42.798" endtime="20230214 22:58:42.923"/>
+</kw>
+<status status="PASS" starttime="20230214 22:58:42.798" endtime="20230214 22:58:42.923"/>
+</kw>
+<kw name="Type in password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORDINPUT}</arg>
+<arg>Test-1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230214 22:58:42.924" level="INFO">Typing text 'Test-1234' into text field 'xpath=//*[@id='password']'.</msg>
+<status status="PASS" starttime="20230214 22:58:42.924" endtime="20230214 22:58:43.003"/>
+</kw>
+<status status="PASS" starttime="20230214 22:58:42.924" endtime="20230214 22:58:43.003"/>
+</kw>
+<kw name="Click on the submit button">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[(text()='Sign in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230214 22:58:43.004" level="INFO">Clicking element 'xpath=//*[(text()='Sign in')]'.</msg>
+<status status="PASS" starttime="20230214 22:58:43.004" endtime="20230214 22:58:43.042"/>
+</kw>
+<status status="PASS" starttime="20230214 22:58:43.004" endtime="20230214 22:58:43.042"/>
+</kw>
+<kw name="Assert Dashboard">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PANELLOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230214 22:58:43.043" endtime="20230214 22:58:44.301"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts</arg>
+<arg>panel</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230214 22:58:44.388" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230214 22:58:44.388" level="FAIL">panel</msg>
+<status status="FAIL" starttime="20230214 22:58:44.301" endtime="20230214 22:58:44.388"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>alert.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20230214 22:58:44.388" endtime="20230214 22:58:44.388"/>
+</kw>
+<status status="FAIL" starttime="20230214 22:58:43.042" endtime="20230214 22:58:44.388"/>
+</kw>
+<status status="FAIL" starttime="20230214 22:58:41.148" endtime="20230214 22:58:44.388">panel</status>
+</test>
+<test id="s1-t2" name="[Teardown]" line="19">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230214 22:58:44.388" endtime="20230214 22:58:46.456"/>
+</kw>
+<status status="PASS" starttime="20230214 22:58:44.388" endtime="20230214 22:58:46.456"/>
+</test>
+<status status="FAIL" starttime="20230214 22:58:40.951" endtime="20230214 22:58:46.456"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Test Login Rf">Test Login Rf</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230214 22:58:40.951" level="ERROR">Error in file 'C:\Users\Vova\PycharmProjects\robotframework\test_login_rf.robot' on line 5: Setting variable '${NAME OF VARIABLE} variable' failed: Invalid variable name '${NAME OF VARIABLE} variable'.</msg>
+</errors>
+</robot>
